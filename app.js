@@ -15,7 +15,7 @@ function zeroCheck(moment){
 let formattedDate = date.getFullYear() + "-" + month  + "-" + monthDate + " " + hours + ":" + minutes ;
 
 const server = net.createServer((socket) => {
-  socket.write(formattedDate);
+  socket.write("this time is" + formattedDate);
   socket.end("\n");
   console.log("Someone hit your server at:",formattedDate);
 
