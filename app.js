@@ -12,7 +12,11 @@ function zeroCheck(moment){
 	return moment < 10 ? "0" + moment : moment;
 }
 
-let formattedDate = date.getFullYear() + "-" + month  + "-" + monthDate + " " + hours + ":" + minutes ;
+let formattedDate = hours + ":" + minutes ;
+
+// Uncomment the following for a v2 that adds the full date: 2019-08-13 12:47
+//let formattedDate = date.getFullYear() + "-" + month  + "-" + monthDate + " " + hours + ":" + minutes ;
+
 
 const server = net.createServer((socket) => {
   socket.write("the time is: " + formattedDate);
