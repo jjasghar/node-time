@@ -9,7 +9,7 @@ const server = net.createServer((socket) => {
   let monthDate = zeroCheck(date.getDate());
   let hours = zeroCheck(date.getHours());
   let minutes = zeroCheck(date.getMinutes());
-  let seconds = date.getSeconds();
+  let seconds = zeroCheck(date.getSeconds());
 
   function zeroCheck(moment){
     return moment < 10 ? "0" + moment : moment;
