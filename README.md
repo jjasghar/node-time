@@ -15,6 +15,11 @@ Pre-Reqs:
 
 All you need to do is run `node app.js` and `curl localhost:8000`
 
+If you want to run some load (every random < 10 seconds) against this application:
+```bash
+$ while true ; do curl localhost:8000 && sleep `echo $(($RANDOM % 10))` ; done
+```
+
 ### Docker container
 
 Pre-Reqs:
